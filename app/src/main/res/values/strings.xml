@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PubNubDemo</string>
+    <string name="subscribe_key">sub-c-451354c6-5ad2-11e5-b316-0619f8945a4f</string>
+    <string name="publish_key">pub-c-af110090-d9b3-4f5c-9f71-a03c6e52737f</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+     <string name="gcm_send_message">Token retrieved and sent to server! You can now use gcmsender to
+        send downstream messages to this app.</string>
+    <string name="registering_message">Generating InstanceID token...</string>
+    <string name="token_error_message">An error occurred while either fetching the InstanceID token,
+        sending the fetched token to the server or subscribing to the PubSub topic. Please try
+        running the sample again.</string>
+</resources>
