@@ -70,7 +70,7 @@ public class RegistrationIntentService extends IntentService {
 
     private void sendRegistrationToServer(String token) {
         // Add custom implementation, as needed.
-        PubNubUtils.associateChannel("demo", token);
+        PubNubUtils.associateChannel("com.test.pubnub", token);
     }
 
     /**
