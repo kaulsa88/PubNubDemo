@@ -1,4 +1,4 @@
-package com.ttnd.pubnubdemo;
+package com.ttnd.pubnubdemo.utils;
 
 import android.content.Context;
 import android.util.Log;
@@ -6,6 +6,7 @@ import android.util.Log;
 import com.pubnub.api.Callback;
 import com.pubnub.api.Pubnub;
 import com.pubnub.api.PubnubError;
+import com.ttnd.pubnubdemo.R;
 
 /**
  * Created by Salil Kaul on 14/9/15.

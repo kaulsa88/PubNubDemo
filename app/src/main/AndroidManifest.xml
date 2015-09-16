@@ -16,7 +16,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,13 +26,13 @@
         </activity>
         [START gcm_receiver]
         <receiver
-        android:name="com.google.android.gms.gcm.GcmReceiver"
-        android:exported="true"
-        android:permission="com.google.android.c2dm.permission.SEND">
-        <intent-filter>
-        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-        <category android:name="com.ttnd.pubnubdemo" />
-        </intent-filter>
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.ttnd.pubnubdemo" />
+            </intent-filter>
         </receiver>
         <!--<receiver-->
         <!--android:name=".PushWooshWakeFullReceiver"-->
@@ -49,7 +49,7 @@
 
         <!-- [START gcm_listener] -->
         <service
-            android:name=".MyGcmListenerService"
+            android:name=".gcm.MyGcmListenerService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
@@ -58,7 +58,7 @@
         <!-- [END gcm_listener] -->
         <!-- [START instanceId_listener] -->
         <service
-            android:name=".MyInstanceIDListenerService"
+            android:name=".service.MyInstanceIDListenerService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.gms.iid.InstanceID" />
@@ -66,9 +66,9 @@
         </service>
         <!-- [END instanceId_listener] -->
         <service
-            android:name=".RegistrationIntentService"
+            android:name="service.RegistrationIntentService"
             android:exported="false"></service>
-        <service android:name=".PushWooshIntentService"></service>
+        <service android:name="service.PushWooshIntentService"></service>
     </application>
 
 </manifest>

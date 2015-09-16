@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.ttnd.pubnubdemo;
+package com.ttnd.pubnubdemo.activity;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -31,6 +31,10 @@ import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.ttnd.pubnubdemo.R;
+import com.ttnd.pubnubdemo.preference.QuickstartPreferences;
+import com.ttnd.pubnubdemo.service.RegistrationIntentService;
+import com.ttnd.pubnubdemo.utils.PubNubUtils;
 
 public class MainActivity extends AppCompatActivity {
 

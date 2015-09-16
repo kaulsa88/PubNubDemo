@@ -1,4 +1,4 @@
-package com.ttnd.pubnubdemo;
+package com.ttnd.pubnubdemo.service;
 
 import android.app.IntentService;
 import android.app.Notification;

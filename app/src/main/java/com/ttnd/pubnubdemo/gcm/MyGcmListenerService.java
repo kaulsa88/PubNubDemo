@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.ttnd.pubnubdemo;
+package com.ttnd.pubnubdemo.gcm;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -27,6 +27,8 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.google.android.gms.gcm.GcmListenerService;
+import com.ttnd.pubnubdemo.R;
+import com.ttnd.pubnubdemo.activity.MainActivity;
 
 public class MyGcmListenerService extends GcmListenerService {
 

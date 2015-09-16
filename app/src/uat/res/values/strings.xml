@@ -1,0 +1,5 @@
+<resources>
+    <!--<string name="gcm_defaultSenderId">367348848587</string>-->
+    <string name="subscribe_key">sub-c-409ea660-5c3b-11e5-b0b1-0619f8945a4f</string>
+    <string name="publish_key">pub-c-8a09912a-ff4f-4b79-8b40-375bd648abb1</string>
+</resources>

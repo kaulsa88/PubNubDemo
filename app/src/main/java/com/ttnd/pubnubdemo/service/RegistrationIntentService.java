@@ -1,4 +1,4 @@
-package com.ttnd.pubnubdemo;
+package com.ttnd.pubnubdemo.service;
 
 import android.app.IntentService;
 import android.content.Context;
@@ -11,6 +11,9 @@ import android.util.Log;
 import com.google.android.gms.gcm.GcmPubSub;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.iid.InstanceID;
+import com.ttnd.pubnubdemo.R;
+import com.ttnd.pubnubdemo.preference.QuickstartPreferences;
+import com.ttnd.pubnubdemo.utils.PubNubUtils;
 
 import java.io.IOException;
 

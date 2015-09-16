@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.ttnd.pubnubdemo;
+package com.ttnd.pubnubdemo.service;
 
 import android.content.Intent;
 

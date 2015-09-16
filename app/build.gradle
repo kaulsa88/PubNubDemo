@@ -20,27 +20,27 @@ android {
         }
     }
 
-    productFlavors{
-        uat{
+    productFlavors {
+        uat {
 
         }
-        defaultflavour{
+        qa {
 
         }
     }
-    def myFlavor = "defaultflavour"
+    def myFlavor = "qa"
 
-    if (myFlavor.equals("uat")) {
-        println "--> uat copy!"
+    if (myFlavor.equals("qa")) {
+        println "--> qa copy!"
         copy {
-            from 'src/uat/'
+            from 'src/qa/'
             include '*.json'
             into '.'
         }
-    } else if(myFlavor.equals("defaultflavour")) {
-        println "--> default copy!"
+    } else if (myFlavor.equals("uat")) {
+        println "--> uat copy!"
         copy {
-            from 'src/main/'
+            from 'src/uat/'
             include '*.json'
             into '.'
         }
