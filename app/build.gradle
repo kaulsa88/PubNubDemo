@@ -11,10 +11,38 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors{
+        uat{
+
+        }
+        defaultflavour{
+
+        }
+    }
+    def myFlavor = "defaultflavour"
+
+    if (myFlavor.equals("uat")) {
+        println "--> uat copy!"
+        copy {
+            from 'src/uat/'
+            include '*.json'
+            into '.'
+        }
+    } else if(myFlavor.equals("defaultflavour")) {
+        println "--> default copy!"
+        copy {
+            from 'src/main/'
+            include '*.json'
+            into '.'
         }
     }
 }
@@ -23,6 +51,6 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.google.android.gms:play-services-gcm:7.5.0'
     compile 'com.android.support:appcompat-v7:22.2.0'
-    compile 'com.pubnub:pubnub-android:3.7.3'
+    compile 'com.pubnub:pubnub-android-debug:3.7.3'
     apply plugin: 'com.google.gms.google-services'
 }

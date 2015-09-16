@@ -1,4 +1,5 @@
 <resources>
+    <!--<string name="gcm_defaultSenderId">367348848587</string>-->
     <string name="app_name">PubNubDemo</string>
     <string name="subscribe_key">sub-c-451354c6-5ad2-11e5-b316-0619f8945a4f</string>
     <string name="publish_key">pub-c-af110090-d9b3-4f5c-9f71-a03c6e52737f</string>

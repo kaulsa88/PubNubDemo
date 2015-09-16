@@ -1,6 +1,7 @@
 package com.ttnd.pubnubdemo;
 
 import android.app.IntentService;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -70,7 +71,7 @@ public class RegistrationIntentService extends IntentService {
 
     private void sendRegistrationToServer(String token) {
         // Add custom implementation, as needed.
-        PubNubUtils.associateChannel("com.test.pubnub", token);
+        PubNubUtils.associateChannel((Context) this, "test_channel", token);
     }
 
     /**
