@@ -7,9 +7,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <permission
-        android:name="com.ttnd.pubnubdemo.permission.C2D_MESSAGE"
+        android:name="${applicationId}.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="com.ttnd.pubnubdemo.permission.C2D_MESSAGE" />
+    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -66,7 +66,7 @@
         </service>
         <!-- [END instanceId_listener] -->
         <service
-            android:name="service.RegistrationIntentService"
+            android:name="com.ttnd.pubnubdemo.service.RegistrationIntentService"
             android:exported="false"></service>
         <service android:name="service.PushWooshIntentService"></service>
     </application>

@@ -32,8 +32,8 @@ import android.widget.TextView;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.ttnd.pubnubdemo.R;
+import com.ttnd.pubnubdemo.async.GetGCMToken;
 import com.ttnd.pubnubdemo.preference.QuickstartPreferences;
-import com.ttnd.pubnubdemo.service.RegistrationIntentService;
 import com.ttnd.pubnubdemo.utils.PubNubUtils;
 
 public class MainActivity extends AppCompatActivity {
@@ -70,8 +70,23 @@ public class MainActivity extends AppCompatActivity {
 
         if (checkPlayServices()) {
             // Start IntentService to register this application with GCM.
-            Intent intent = new Intent(this, RegistrationIntentService.class);
-            startService(intent);
+           /* Intent intent = new Intent(this, RegistrationIntentService.class);
+            startService(intent);*/
+            new GetGCMToken(this, new GCMRegistrationCallback() {
+                @Override
+                public void gcmIdReceived() {
+                    mRegistrationProgressBar.setVisibility(ProgressBar.GONE);
+                    SharedPreferences sharedPreferences =
+                            PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                    boolean sentToken = sharedPreferences
+                            .getBoolean(QuickstartPreferences.SENT_TOKEN_TO_SERVER, false);
+                    if (sentToken) {
+                        mInformationTextView.setText(getString(R.string.gcm_send_message));
+                    } else {
+                        mInformationTextView.setText(getString(R.string.token_error_message));
+                    }
+                }
+            }).execute();
         }
     }
 
@@ -109,4 +124,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    public interface GCMRegistrationCallback {
+        void gcmIdReceived();
+    }
 }

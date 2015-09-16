@@ -22,10 +22,10 @@ android {
 
     productFlavors {
         uat {
-
+            applicationId = "com.ttnd.pubnubdemo.uat"
         }
         qa {
-
+            applicationId = "com.ttnd.pubnubdemo.qa"
         }
     }
     def myFlavor = "qa"
